@@ -30,6 +30,7 @@ int main() {
     do {
         Sleep(SPEED);
 		draw_sprite(buffer, fundo, 0, 0);
+		draw_sprite(buffer, moldura, 0, 0);
 		// Messages and text movement
     	if (debugMode) {
         	printDebugMessages(xText, "DEBUG_MODE_ON", wCursor, cValue);

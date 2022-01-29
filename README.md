@@ -16,6 +16,6 @@ Cada elemento possui suas vantagens e desvantagens:
 
 Prévia de lançamento (pode não ser idêntica ao estado atual do jogo):
 
-![Imgur](https://i.imgur.com/ojfdkGH.png)
+![Imgur](https://i.imgur.com/i1hFDCN.png)
 
 Artes do game [Reino Felino](https://mewmewdevart.itch.io/reino-felino) foram brevemente utilizadas durante a construção ([fonte](https://i.imgur.com/CKqzohW.png)).

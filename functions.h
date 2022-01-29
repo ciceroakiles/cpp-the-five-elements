@@ -14,7 +14,8 @@
 
 using namespace std;
 
-BITMAP *buffer, *fundo;
+BITMAP *buffer;
+BITMAP *fundo, *moldura;
 PALETTE pal;
 
 // For card resources
@@ -276,9 +277,10 @@ void battleResults(bool &plCard, bool &opCard, int &pts1, int &pts2) {
 
 void preload() {
     set_window_title("The Five Elements");
-    // Background
 	buffer = create_bitmap(WIDTH, HEIGHT);
+	// Background
     fundo = load_bitmap((BMP_PATH + "\\fundo.bmp").c_str(), pal);
+    moldura = load_bitmap((BMP_PATH + "\\moldura.bmp").c_str(), pal);
     // Card resources
     for (int i = 0; i < 5; i++) {
         std::ostringstream index;
