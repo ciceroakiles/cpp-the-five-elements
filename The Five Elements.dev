@@ -1,0 +1,89 @@
+[Project]
+FileName=The Five Elements.dev
+Name=The Five Elements
+UnitCount=4
+Type=0
+Ver=1
+ObjFiles=
+Includes=
+Libs=
+PrivateResource=The_Five_Elements_private.rc
+ResourceIncludes=
+MakeIncludes=
+Compiler=-DALLEGRO_STATICLINK
+CppCompiler=-DALLEGRO_STATICLINK
+Linker=-lalleg_s -lkernel32 -luser32 -lgdi32 -lcomdlg32 -lole32 -ldinput -lddraw -ldxguid -lwinmm -ldsound
+IsCpp=1
+Icon=The Five Elements.ico
+ExeOutput=
+ObjectOutput=
+OverrideOutput=0
+OverrideOutputName=
+HostApplication=
+Folders=
+CommandLine=
+UseCustomMakefile=0
+CustomMakefile=
+IncludeVersionInfo=0
+SupportXPThemes=0
+CompilerSet=0
+CompilerSettings=
+
+[Unit1]
+FileName=main.cpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[VersionInfo]
+Major=0
+Minor=1
+Release=1
+Build=1
+LanguageID=1033
+CharsetID=1252
+CompanyName=
+FileVersion=
+FileDescription=Developed using the Dev-C++ IDE
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=
+AutoIncBuildNr=0
+
+[Unit2]
+FileName=box.cpp
+CompileCpp=1
+Folder=The Five Elements
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit3]
+FileName=functions.h
+CompileCpp=1
+Folder=The Five Elements
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit4]
+FileName=box.h
+CompileCpp=1
+Folder=The Five Elements
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
