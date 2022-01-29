@@ -8,7 +8,7 @@ Cada elemento possui suas vantagens e desvantagens:
 
 * TERRA vence FOGO e ÁGUA, mas perde para METAL e MADEIRA;
 
-* METAL vence MADEIRA e TERRA, mas perde para FOGO e ÁGUA;
+* METAL vence TERRA e MADEIRA, mas perde para FOGO e ÁGUA;
 
 * MADEIRA vence TERRA e ÁGUA, mas perde para FOGO e METAL;
 
