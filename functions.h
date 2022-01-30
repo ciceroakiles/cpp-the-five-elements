@@ -14,9 +14,12 @@
 
 using namespace std;
 
-BITMAP *buffer;
-BITMAP *fundo, *moldura;
 PALETTE pal;
+BITMAP *buffer;
+
+// For visual effects
+BITMAP *fundo, *moldura;
+BITMAP *vapor, *lotus;
 
 // For card resources
 BITMAP *cardimgon[5], *cardimgoff[5];
@@ -81,6 +84,11 @@ void printFullCardDesc(BITMAP *buffer, int place) {
         case 3: printCardDescription(buffer, "WOOD", "EARTH, WATER", "FIRE, METAL"); break;
         case 4: printCardDescription(buffer, "WATER", "FIRE, METAL", "EARTH, WOOD"); break;
         default: break;
+    }
+    // Print tip
+    if (chosenCardPL == -1) {
+        textprintf_ex(buffer, font, DESC_X, 530-Y_ADJ, makecol(255,255,255), -1, "PRESS [UP]");
+        textprintf_ex(buffer, font, DESC_X, 540-Y_ADJ, makecol(255,255,255), -1, "TO SELECT THIS CARD.");
     }
 }
 
@@ -167,13 +175,11 @@ void displayOPCard(BITMAP *buffer) {
 }
 
 void displayUpperHit() {
-    line(buffer, 350-X_ADJ, 250-Y_ADJ, 300-X_ADJ, 320-Y_ADJ, -1);
-    line(buffer, 300-X_ADJ, 250-Y_ADJ, 350-X_ADJ, 320-Y_ADJ, -1);
+    draw_sprite(buffer, vapor, 290-X_ADJ, 240-Y_ADJ);
 }
 
 void displayLowerHit() {
-    line(buffer, 350-X_ADJ, 400-Y_ADJ, 300-X_ADJ, 470-Y_ADJ, -1);
-    line(buffer, 300-X_ADJ, 400-Y_ADJ, 350-X_ADJ, 470-Y_ADJ, -1);
+    draw_sprite(buffer, vapor, 290-X_ADJ, 390-Y_ADJ);
 }
 
 void doMoveCursor(BITMAP *buffer, int &place, int &screen_pos) {
@@ -236,10 +242,20 @@ bool doConfirmDialog(BITMAP *buffer, int card) {
     return false;
 }
 
+void checkCenterCard() {
+    bool flagSelect = false;
+    for (int i = 0; i < 5; i++) {
+        if (cards[1][i] != 0) flagSelect = true;
+    }
+    if (!flagSelect) chosenCardPL = -1;
+}
+
 void combatAnimation(int res) {
     switch (res) {
         case 1: {
             // Win
+            draw_sprite(buffer, lotus, 210-X_ADJ, 340-Y_ADJ);
+            draw_sprite(buffer, lotus, 400-X_ADJ, 340-Y_ADJ);
             textprintf_ex(buffer, font, 300-X_ADJ, 360-Y_ADJ, makecol(255,255,255), -1, "YOU WIN!");
             displayUpperHit();
         } break;
@@ -281,6 +297,8 @@ void preload() {
 	// Background
     fundo = load_bitmap((BMP_PATH + "\\fundo.bmp").c_str(), pal);
     moldura = load_bitmap((BMP_PATH + "\\moldura.bmp").c_str(), pal);
+    vapor = load_bitmap((BMP_PATH + "\\vapor.bmp").c_str(), pal);
+    lotus = load_bitmap((BMP_PATH + "\\lotus.bmp").c_str(), pal);
     // Card resources
     for (int i = 0; i < 5; i++) {
         std::ostringstream index;

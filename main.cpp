@@ -63,6 +63,7 @@ int main() {
         if (PLhasCenterCard) {
             if (canCancel) doCancel(false);
             if (doConfirmDialog(buffer, centerCard)) OPhasCenterCard = true;
+            checkCenterCard();
         }
         bool flagReady = false;
         if (OPhasCenterCard) {
@@ -87,6 +88,7 @@ int main() {
 	} while (!key[KEY_ESC]);
 	// Destroy objects
 	destroy_bitmap(fundo);
+	destroy_bitmap(moldura);
 	destroy_bitmap(buffer);
 	destroy_midi(musica);
 	destroy_sample(beep);
