@@ -1,6 +1,6 @@
 # The Five Elements
 
-[Link para download](https://mega.nz/file/7Il1nCQL#tVIu_M89FQP56fBuvdT6hCR8SQEhDYwF96Ho69SOOow).
+[Link para download](https://mega.nz/file/fYVkgBII#HN1JxRqYZCwYIIaL68xSP5MnUG1X-tqYorjYSeH1XLs).
 
 Requer resolução maior que 800x600 ([roda até no Windows XP](https://i.imgur.com/BWv0DGf.png)).
 
@@ -20,8 +20,25 @@ Cada elemento possui suas vantagens e desvantagens:
 
 * ÁGUA vence FOGO e METAL, mas perde para TERRA e MADEIRA.
 
-Prévia de lançamento (pode não ser idêntica ao estado atual do jogo):
+## Controles
 
-![Imgur](https://i.imgur.com/Xg6ySCh.png)
+* No menu principal:
+    * Setas cima ou baixo: selecionar opção;
+    * ENTER: escolher opção.
+* No jogo:
+    * BACKSPACE: volta para o menu principal;
+    * Setas esquerda ou direita: selecionar carta;
+        * ENTER para escolher e confirmar, seta baixo para cancelar;
+* ESC: sai do jogo a qualquer momento.
+
+## Imagens
+
+<table>
+  <tr>
+    <th><img src="https://i.imgur.com/bLcqdnz.png" /></th>
+    <th><img src="https://i.imgur.com/Xg6ySCh.png" /></th>
+  </tr>
+</table>
 
 Artes do game [Reino Felino](https://mewmewdevart.itch.io/reino-felino) foram brevemente utilizadas durante o desenvolvimento ([fonte](https://i.imgur.com/CKqzohW.png)).
+

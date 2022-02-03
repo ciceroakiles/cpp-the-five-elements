@@ -1,13 +1,15 @@
 #include "box.h"
 
-void Box::setPosition(int x, int y) {
+void Box::setDimensions(int x, int y, int width, int height) {
     Box::x_pos = x;
     Box::y_pos = y;
+    Box::width = width;
+    Box::height = height;
 }
 
-void Box::newWindow(BITMAP *buffer) {
+void Box::newBox(BITMAP *buffer) {
     BITMAP *bufbkp = buffer;
-    rect(bufbkp, Box::x_pos, Box::y_pos+70, Box::x_pos+50, Box::y_pos, -1);
+    rect(bufbkp, Box::x_pos, Box::y_pos+Box::height, Box::x_pos+Box::width, Box::y_pos, -1);
     draw_sprite(buffer, bufbkp, 0, 0);
     // For debugging purposes
     //textprintf_ex(buffer, font, Box::x_pos, Box::y_pos, makecol(255,255,255), -1, "%d\n%d", Box::x_pos, Box::y_pos);

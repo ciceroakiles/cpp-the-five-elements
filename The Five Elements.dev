@@ -1,7 +1,7 @@
 [Project]
 FileName=The Five Elements.dev
 Name=The Five Elements
-UnitCount=4
+UnitCount=5
 Type=0
 Ver=1
 ObjFiles=
@@ -81,6 +81,16 @@ BuildCmd=
 FileName=box.h
 CompileCpp=1
 Folder=The Five Elements
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit5]
+FileName=game.h
+CompileCpp=1
+Folder=
 Compile=1
 Link=1
 Priority=1000

@@ -2,9 +2,9 @@
 #include <winalleg.h>
 
 class Box {
-    int x_pos, y_pos;
+    int x_pos, y_pos, width, height;
     
     public:
-        void setPosition(int x, int y);
-        void newWindow(BITMAP *buffer);
+        void setDimensions(int x, int y, int width, int height);
+        void newBox(BITMAP *buffer);
 };
